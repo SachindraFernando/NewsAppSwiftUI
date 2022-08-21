@@ -1,7 +1,7 @@
 # NewsAppSwiftUI
 
 
-Demo Link: 
+Demo Link: https://drive.google.com/file/d/1KNox8CQDywDeOAeoOANi0gZ-3urM2DBS/view?usp=sharing
 
 Includes:
 - Auth functions (login, sign up, log out)
