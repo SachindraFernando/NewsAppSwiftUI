@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>505682318350-v20raa1gegrl0mdhaprvat7rb1em6rka.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.505682318350-v20raa1gegrl0mdhaprvat7rb1em6rka</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDsj376c782BdnEO8sLRv4UUYmr7AAVHiY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>505682318350</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.test.TestAuth</string>
+	<key>PROJECT_ID</key>
+	<string>testauthswiftui</string>
+	<key>STORAGE_BUCKET</key>
+	<string>testauthswiftui.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:505682318350:ios:ba091d8b6a36038967d85f</string>
+	<key>DATABASE_URL</key>
+	<string>https://testauthswiftui-default-rtdb.asia-southeast1.firebasedatabase.app</string>
+</dict>
+</plist>
