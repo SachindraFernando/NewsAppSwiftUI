@@ -23,13 +23,13 @@ struct TabBarStyled: View {
                         , label: {
                             VStack(alignment:.center ,spacing: 5){
                                 Image(tab.isSelected ? tab.imageActive : tab.imageInactive)
-                                    .foregroundColor(.white)
+                                    .foregroundColor(tab.isSelected ? Color("Primary") : Color.gray)
                                     .frame(width: 26, height: 24)
                                     .shadow(color: Color.black.opacity(tab.isSelected ? 0.1 : 0), radius: 3, x: 0, y: 1)
                                     .padding(.top, 6)
                                 Text(tab.title)
                                     //.font(Font.custom(tab.isSelected ? "Poppins-SemiBold" : "Poppins-Regular", size: 11))
-                                    //.foregroundColor(Color(tab.isSelected ? "Secondary" : "Primary"))
+                                    .foregroundColor(tab.isSelected ? Color.black : Color.gray)
                                     .foregroundColor(.gray)
                             }
                             .padding(.horizontal, 5)

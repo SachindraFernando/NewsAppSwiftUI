@@ -10,6 +10,7 @@ import SwiftUI
 struct CarouselView: View {
      
     @State var CurrentIndex : Int = 1
+    let article: Article
      
     var body: some View {
         VStack {
@@ -33,22 +34,51 @@ struct CarouselView: View {
                          
                         return AnyView(
                             VStack{
-                                Image("picture\(index)")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .padding(.horizontal,10)
-                                 
-                                Text("Loren ipsum dlipsum")
-                                    .font(.largeTitle)
-                                    .fontWeight(.heavy)
-                                    .foregroundColor(.white)
-                                    //.background(Color.green)
-                                    .padding()
-                                 
-                                Text("Loren ipsum, or dlipsum as is somtine know text usded in layoyt Loren ipsum, or dlipsum as is somtine know text usded in layoyt")
-                                    .font(.system(size: 16, weight: .bold))
-                                    .foregroundColor(.white)
-                                    .padding(.horizontal)
+                                
+                                ZStack{
+                                    AsyncImage(url: article.imageURL) { phase in
+                                        switch phase {
+                                        case .empty:
+                                            HStack {
+                                                Spacer()
+                                                ProgressView()
+                                                Spacer()
+                                            }
+                                            
+                                        case .success(let image):
+                                            image
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fill)
+                                            
+                                        case .failure:
+                                            HStack {
+                                                Spacer()
+                                                Image(systemName: "photo")
+                                                    .imageScale(.large)
+                                                Spacer()
+                                            }
+                                            
+                                            
+                                        @unknown default:
+                                            fatalError()
+                                        }
+                                    }
+                                        
+                                        
+                                    VStack{
+                                        Text(article.title)
+                                            .font(.largeTitle)
+                                            .fontWeight(.heavy)
+                                            .foregroundColor(.white)
+                                            //.background(Color.green)
+                                            .padding()
+                                         
+                                        Text(article.captionText)
+                                            .font(.system(size: 16, weight: .bold))
+                                            .foregroundColor(.white)
+                                            .padding(.horizontal)
+                                    }
+                                }
                                      
                             }
                             .frame(maxHeight: .infinity, alignment: .center)
@@ -69,7 +99,7 @@ struct CarouselView: View {
             
         }
         .frame(maxWidth: .infinity, maxHeight: 250.0)
-        .background(Color.blue).ignoresSafeArea()
+        .background(Color.white).ignoresSafeArea()
     }
 }
  

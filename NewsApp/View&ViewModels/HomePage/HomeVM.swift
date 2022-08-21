@@ -10,4 +10,6 @@ import Foundation
 
 class HomeVM : ObservableObject{
     @Published var searchText = ""
+    @Published var article: Article?
+    
 }

@@ -32,7 +32,7 @@ struct MainView: View {
                         HomeView(articles: Article.previewData)
                         
                     case 1:
-                        Color.blue
+                        FavouriteView()
                     case 2:
                         ProfileView()
                     default:

@@ -10,6 +10,8 @@ import Firebase
 
 @main
 struct NewsAppApp: App {
+    @StateObject var articleVM = FavouriteVM.shared
+    
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @StateObject var sessionService = SessionServiceImpl()
     
@@ -19,6 +21,7 @@ struct NewsAppApp: App {
                 switch sessionService.state {
                 case .loggedIn:
                     MainView()
+                        .environmentObject(articleVM)
                         .environmentObject(sessionService)
                 case .loggedOut:
                     LoginView()

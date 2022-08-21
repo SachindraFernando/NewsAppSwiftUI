@@ -46,7 +46,7 @@ struct Article {
     }
     
     var dateText: String {
-        let pickedDate: String = Date().toString(dateCast: publishedAt, format: "yyyy-MM-dd")
+        let pickedDate: String = Date().toString(dateCast: publishedAt, format: "E, d MMM yyyy")
         return "\(pickedDate)"
     }
     

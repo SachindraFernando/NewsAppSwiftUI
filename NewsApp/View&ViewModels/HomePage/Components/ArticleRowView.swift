@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ArticleRowView: View {
     
+    @EnvironmentObject var vmF: FavouriteVM
     let article: Article
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -57,15 +58,31 @@ struct ArticleRowView: View {
                             .lineLimit(1)
                             .foregroundColor(Color.white)
                             .font(.caption)
-                        
-                        HStack{
                             
-                        }.frame(width: 90)
+                        HStack{
+
+                        }.frame(width: 60)
                         
                         Text(article.dateText)
                             .lineLimit(1)
                             .foregroundColor(Color.white)
                             .font(.caption)
+                        
+                        HStack{
+
+                        }.frame(width: 60)
+                        
+                        Button {
+                            toggleBookmark(for: article)
+                        } label: {
+                            Image(vmF.isBookmarked(for: article) ? "heartFill" : "heart")
+                                .padding(8)
+                                .background(Color.red)
+                                .clipShape(Circle())
+                                .font(.largeTitle)
+                                .foregroundColor(.white)
+                        }
+                            
                             
                     }.padding(.top, 80)
                 }
@@ -78,6 +95,14 @@ struct ArticleRowView: View {
             
         }
         .cornerRadius(10)
+    }
+    
+    private func toggleBookmark(for article: Article) {
+        if vmF.isBookmarked(for: article) {
+            vmF.removeBookmark(for: article)
+        } else {
+            vmF.addBookmark(for: article)
+        }
     }
 }
 
@@ -94,6 +119,8 @@ extension View {
 }
 
 struct ArticleRowView_Previews: PreviewProvider {
+    
+    @StateObject static var articleVM = FavouriteVM.shared
 
     static var previews: some View {
         NavigationView {
@@ -102,6 +129,6 @@ struct ArticleRowView_Previews: PreviewProvider {
                     .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
             }
             .listStyle(.plain)
-        }
+        }.environmentObject(articleVM)
     }
 }

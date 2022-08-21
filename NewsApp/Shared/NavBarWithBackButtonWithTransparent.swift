@@ -31,8 +31,8 @@ struct NavBarWithBackButtonWithTransparent: View {
             }
         }
         .padding(.horizontal, 16)
-        .padding(.bottom, 140)
-        .frame(height: 220)
+        .padding(.bottom, 320)
+        .frame(height: 480)
         .background(Color.black.opacity(0))
     }
 }
@@ -40,5 +40,6 @@ struct NavBarWithBackButtonWithTransparent: View {
 struct NavBarWithBackButtonWithTransparent_Previews: PreviewProvider {
     static var previews: some View {
         NavBarWithBackButtonWithTransparent(title: "nnn")
+            .previewLayout(.sizeThatFits)
     }
 }
