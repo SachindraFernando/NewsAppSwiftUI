@@ -151,6 +151,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F659281728B2A9040088D020 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F6DB819E28B1F133006BF267 /* LoginCredentials.swift */,
+				F6DB81A028B1F13B006BF267 /* LoginService.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F659281828B2A9250088D020 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F6DB819428B1F10B006BF267 /* RegistrationDetails.swift */,
+				F6DB819628B1F113006BF267 /* RegistrationService.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		F67BFE2528B23874001C74FB /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,14 +235,14 @@
 			children = (
 				F67BFE2528B23874001C74FB /* API */,
 				F6DB81B128B2193C006BF267 /* Models */,
-				F6DB818628B1F0C3006BF267 /* GoogleService-Info.plist */,
-				F6DB816628B1D3F2006BF267 /* Info.plist */,
 				F6DB816728B1D434006BF267 /* Utility */,
 				F6DB815C28B16406006BF267 /* SupportingFiles */,
 				F6DB815B28B163FC006BF267 /* Shared */,
-				F6DB815A28B163E6006BF267 /* View&ViewModels */,
 				F6DB815928B163D2006BF267 /* App */,
+				F6DB815A28B163E6006BF267 /* View&ViewModels */,
 				F6DB815128B1628F006BF267 /* Preview Content */,
+				F6DB818628B1F0C3006BF267 /* GoogleService-Info.plist */,
+				F6DB816628B1D3F2006BF267 /* Info.plist */,
 			);
 			path = NewsApp;
 			sourceTree = "<group>";
@@ -261,6 +279,8 @@
 		F6DB815B28B163FC006BF267 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				F6DB817728B1D5A8006BF267 /* FontConstant.swift */,
+				F67BFE1D28B22A16001C74FB /* Extensions.swift */,
 				F6DB819C28B1F12B006BF267 /* SessionService.swift */,
 				F6DB819A28B1F123006BF267 /* SessionUserDetails.swift */,
 				F6DB818E28B1F0EE006BF267 /* ButtonView.swift */,
@@ -282,7 +302,6 @@
 			children = (
 				F6DB814F28B1628F006BF267 /* Assets.xcassets */,
 				F6DB81AF28B21908006BF267 /* news.json */,
-				F67BFE1D28B22A16001C74FB /* Extensions.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -316,7 +335,6 @@
 				F6DB817128B1D491006BF267 /* Nunito Regular.ttf */,
 				F6DB816E28B1D47A006BF267 /* Nunito-SemiBold.ttf */,
 				F6DB816928B1D44A006BF267 /* NEWYORK.ttf */,
-				F6DB817728B1D5A8006BF267 /* FontConstant.swift */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -343,10 +361,9 @@
 		F6DB818128B1EE4D006BF267 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				F6DB819828B1F11A006BF267 /* RegistrationViewModel.swift */,
-				F6DB819628B1F113006BF267 /* RegistrationService.swift */,
-				F6DB819428B1F10B006BF267 /* RegistrationDetails.swift */,
 				F6DB819028B1F0F8006BF267 /* RegisterView.swift */,
+				F6DB819828B1F11A006BF267 /* RegistrationViewModel.swift */,
+				F659281828B2A9250088D020 /* Components */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -354,10 +371,9 @@
 		F6DB818228B1EE55006BF267 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				F6DB81A228B1F142006BF267 /* LoginViewModel.swift */,
-				F6DB81A028B1F13B006BF267 /* LoginService.swift */,
-				F6DB819E28B1F133006BF267 /* LoginCredentials.swift */,
 				F6DB818428B1EFF7006BF267 /* LoginView.swift */,
+				F6DB81A228B1F142006BF267 /* LoginViewModel.swift */,
+				F659281728B2A9040088D020 /* Components */,
 			);
 			path = Login;
 			sourceTree = "<group>";

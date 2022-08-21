@@ -22,10 +22,12 @@ struct NewsAPI {
         return decoder
     }()
     
+    //MARK: - FETCH DATA
     func fetch(from category: Category) async throws -> [Article] {
         try await fetchArticles(from: generateNewsURL(from: category))
     }
     
+    //MARK: - SEARCH DATA
     func search(for query: String) async throws -> [Article] {
         try await fetchArticles(from: generateSearchURL(from: query))
     }

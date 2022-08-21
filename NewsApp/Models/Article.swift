@@ -11,6 +11,7 @@ fileprivate let relativeDateFormatter = RelativeDateTimeFormatter()
 
 struct Article {
     
+    //MARK: - PROPERTIES
     let id = UUID()
 
     let source: Source

@@ -9,10 +9,12 @@ import SwiftUI
 
 struct FavouriteView: View {
     
+    //MARK: - PROPERTIES
     @EnvironmentObject var vmF: FavouriteVM
     @State var searchText: String = ""
     
     var body: some View {
+        
         let articles = self.articles
         
         NavigationView {

@@ -21,8 +21,6 @@ struct ProfileView: View {
                         
                         VStack(alignment: .center, spacing: 20) {
                             
-                            //MARK: - SEARCH BAR
-                            
                                 
                             //MARK: - HEADER
                             HStack{
@@ -36,7 +34,7 @@ struct ProfileView: View {
                             .padding(.leading,16)
                             .padding(.trailing,16)
                             
-                            
+                            //MARK: - ACCOUNT DETAILS
                             VStack(alignment: .leading, spacing: 16){
                                 VStack(alignment: .leading, spacing: 16){
                                     Text("First Name : \(sessionService.userDetails?.firstName ?? "")")
@@ -44,6 +42,7 @@ struct ProfileView: View {
                                     Text("Occupation : \(sessionService.userDetails?.occupation ?? "")")
                                 }
                                 
+                                //MARK: - LOGOUT BUTTON
                                 ButtonView(title: "Logout",
                                            background: Color("White"),
                                            foreground: Color("Primary"),

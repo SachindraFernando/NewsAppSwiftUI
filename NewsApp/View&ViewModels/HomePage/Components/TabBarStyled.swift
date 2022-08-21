@@ -27,8 +27,8 @@ struct TabBarStyled: View {
                                     .frame(width: 26, height: 24)
                                     .shadow(color: Color.black.opacity(tab.isSelected ? 0.1 : 0), radius: 3, x: 0, y: 1)
                                     .padding(.top, 6)
+                                
                                 Text(tab.title)
-                                    //.font(Font.custom(tab.isSelected ? "Poppins-SemiBold" : "Poppins-Regular", size: 11))
                                     .foregroundColor(tab.isSelected ? Color.black : Color.gray)
                                     .foregroundColor(.gray)
                             }

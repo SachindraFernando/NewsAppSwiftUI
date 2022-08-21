@@ -10,6 +10,7 @@ import SwiftUI
 @MainActor
 class FavouriteVM: ObservableObject {
 
+    //MARK: - PROPERTIES
     @Published private(set) var bookmarks: [Article] = []
     private let bookmarkStore = PlistDataStore<[Article]>(filename: "bookmarks")
     

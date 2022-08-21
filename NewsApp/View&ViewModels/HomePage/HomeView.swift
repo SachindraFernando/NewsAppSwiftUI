@@ -75,8 +75,6 @@ struct HomeView: View {
                                     .padding(.leading,16)
                                     .padding(.trailing,16)
                             
-                            
-                            
                             //MARK: - TABS
                             HStack{
                                 TabCard(title: "Health", foreColor: "White", backColor: "Primary", borderColor: "Primary", action: {})

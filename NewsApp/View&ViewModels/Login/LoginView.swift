@@ -9,23 +9,28 @@ import SwiftUI
 
 struct LoginView: View {
     
+    //MARK: - PROPERTIES
     @State private var showRegistration = false
-    @StateObject private var vm = LoginViewModelImpl(service: LoginServiceImpl()
-    )
+    @StateObject private var vm = LoginViewModelImpl(service: LoginServiceImpl())
     
     var body: some View {
         VStack(spacing: 16){
+            
+            //MARK: - EMAIL
             InputTextField(text: $vm.credentials.email,
                            placeholder: "Email",
                            keyboardType: .emailAddress,
                            sfSymbol: "envelope")
             
+            //MARK: - PASSWORD
             InputPasswordView(password: $vm.credentials.password,
                               placeholder: "Passord",
                               sfSymbol: "lock")
             
+            
             VStack(spacing: 16){
                 
+                //MARK: - LOGIN BUTTON
                 ButtonView(title: "Login",
                            background: Color("Primary"),
                            foreground: Color("White"),
@@ -33,6 +38,7 @@ struct LoginView: View {
                     vm.login()
                 }
                 
+                //MARK: - SIGNUP BUTTON
                 ButtonView(title: "Register",
                            background: .clear,
                            foreground: Color("Primary"),
